@@ -1,4 +1,6 @@
+import 'package:bmi_pj/data/models/todo_list/task.dart';
 import 'package:bmi_pj/utils/extensions.dart';
+import 'package:bmi_pj/utils/task_categories.dart';
 import 'package:bmi_pj/widgets/common_container.dart';
 import 'package:bmi_pj/widgets/display_list_of_tasks.dart';
 import 'package:bmi_pj/widgets/display_white_text.dart';
@@ -46,7 +48,29 @@ class TodoListView extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  const DisplayListOfTasks(tasks: []),
+                  const DisplayListOfTasks(tasks: [
+                    Task(
+                        title: 'title',
+                        note: 'note',
+                        date: 'Aug, 07',
+                        time: '10:12',
+                        category: TaskCategories.education,
+                        isCompleted: false),
+                    Task(
+                        title: 'title 2',
+                        note: 'note',
+                        date: 'Aug, 07',
+                        time: '12:12',
+                        category: TaskCategories.health,
+                        isCompleted: false),
+                    Task(
+                        title: 'title 3',
+                        note: 'note',
+                        date: 'Aug, 07',
+                        time: '15:12',
+                        category: TaskCategories.home,
+                        isCompleted: false),
+                  ]),
                   const Gap(20),
                   Text(
                     'Completed',
@@ -54,7 +78,22 @@ class TodoListView extends StatelessWidget {
                   ),
                   const Gap(20),
                   const DisplayListOfTasks(
-                    tasks: [],
+                    tasks: [
+                      Task(
+                          title: 'title',
+                          note: 'note',
+                          date: 'Aug, 07',
+                          time: '10:12',
+                          category: TaskCategories.education,
+                          isCompleted: true),
+                      Task(
+                          title: 'title 2',
+                          note: 'note',
+                          date: 'Aug, 07',
+                          time: '12:12',
+                          category: TaskCategories.health,
+                          isCompleted: true),
+                    ],
                     isCompletedTask: true,
                   ),
                   const Gap(20),

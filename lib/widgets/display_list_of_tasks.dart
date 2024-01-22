@@ -1,9 +1,11 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:bmi_pj/widgets/task_tile.dart';
 import 'package:flutter/material.dart';
 
 import 'package:bmi_pj/data/models/todo_list/task.dart';
 import 'package:bmi_pj/utils/extensions.dart';
 import 'package:bmi_pj/widgets/common_container.dart';
+import 'package:gap/gap.dart';
 
 class DisplayListOfTasks extends StatelessWidget {
   const DisplayListOfTasks({
@@ -26,15 +28,31 @@ class DisplayListOfTasks extends StatelessWidget {
       height: height,
       child: tasks.isEmpty
           ? Center(
-              child: Text(emptyTasksMessage),
+              child: Text(
+                emptyTasksMessage,
+                style: context.textTheme.headlineSmall,
+              ),
             )
-          : ListView.builder(
+          : ListView.separated(
               shrinkWrap: true,
               padding: EdgeInsets.zero,
               itemBuilder: (ctx, index) {
-                return const Text('Home');
+                final task = tasks[index];
+                return InkWell(
+                    onLongPress: () {
+                      //delete task
+                    },
+                    onTap: () {
+                      //show detail task
+                    },
+                    child: TaskTile(task: task));
               },
               itemCount: tasks.length,
+              separatorBuilder: (BuildContext context, int index) {
+                return const Divider(
+                  thickness: 1.5,
+                );
+              },
             ),
     );
   }

@@ -1,7 +1,7 @@
 import 'package:bmi_pj/constants/route_paths.dart' as route;
 import 'package:bmi_pj/data/services/injection/injection.dart';
 import 'package:bmi_pj/data/services/navigator/navigation_service.dart';
-import 'package:bmi_pj/presentations/screens/bmi_view.dart';
+// import 'package:bmi_pj/presentations/screens/bmi_view.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';

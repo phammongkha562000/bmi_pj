@@ -11,7 +11,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-    
+
   flutter_animate: ^4.3.0
   flutter_riverpod: ^2.4.9
   flutter_hooks: ^0.20.3
@@ -24,15 +24,20 @@ dependencies:
   build_runner: ^2.4.7
   injectable_generator: ^2.4.1
 
-
   equatable: ^2.0.5
   flex_color_scheme: ^7.3.1
   font_awesome_flutter: ^10.6.0
   gap: ^3.0.1
-  google_fonts: ^6.1.0
+  google_fonts: 6.1.0
   intl: ^0.19.0
   path: ^1.8.3
+  flutter_native_splash: ^2.3.11
 
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/icons/logo_bmi.png
+  android_12:
+    image: assets/icons/logo_bmi.png
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:bmi_pj/data/models/todo_list/task.dart';
 import 'package:bmi_pj/utils/extensions.dart';
 import 'package:bmi_pj/widgets/common_container.dart';
-import 'package:gap/gap.dart';
 
 class DisplayListOfTasks extends StatelessWidget {
   const DisplayListOfTasks({
